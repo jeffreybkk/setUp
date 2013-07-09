@@ -1,0 +1,40 @@
+@import "neat/neat-helpers"
+
+
+// GRID OVERLAY
+
+$visual-grid:true;
+$visual-grid-color:rgb(255,0,0);
+$visual-grid-index:back;
+
+// BOX-SIZING
+
+$border-box-sizing:true;
+
+$em:16px;
+
+
+// GRID SETTINGS
+
+$column:90px !default;
+$gutter:em(24px) !default;
+$grid-columns:4;
+$max-width:1120px !default;
+
+
+// BOURBON WATCH WHAT NEAT DOES
+
+$fg-columns:$grid-columns;
+$fg-gutter:$gutter;
+$fg-column:$column;
+
+
+
+
+// BREAKPOINT 
+
+$mobile-land:new-breakpoint(min-width:480px 8)
+$tab: new-breakpoint(min-width:740px 12);
+$desktop: new-breakpoint(min-width: 1024px 12);
+
+

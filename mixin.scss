@@ -1,0 +1,50 @@
+// SET OF USEFULL MIXIN FOR NEAT 
+
+
+// OMEGA RESET
+
+@mixin omega-reset($nth,$num-col) {
+	 &.nth-child(#{nth}) { margin-right:flex-gutter($num-col);}
+	 &.nth-child(#{nth}+1) { clear:none; }
+
+}
+
+// POSITION RELATIVE AND RIGHT
+
+@mixin push($n-columns: 1) {
+
+  $direction: get-direction($layout-direction, $default-layout-direction);
+  $opposite-direction: get-opposite-direction($direction);
+  
+  position: relative;
+  #{$opposite-direction}: $n-columns * flex-grid(1, $parent-columns) + $n-columns * flex-gutter($parent-columns);
+
+  // Reset nesting context
+  $parent-columns: $grid-columns;
+}
+
+
+// POSITION RELATIVE AND LEFT
+
+@mixin pull($n-columns: 1) {
+
+  $direction: get-direction($layout-direction, $default-layout-direction);
+  $opposite-direction: get-opposite-direction($direction);
+
+  position: relative;
+  #{$direction}: $n-columns * flex-grid(1, $parent-columns) + $n-columns * flex-gutter($parent-columns);
+
+  // Reset nesting context
+  $parent-columns: $grid-columns;
+}
+
+@mixin panel {
+	padding: 10px 15px;
+	background: ;
+	display: block;
+	border: 1px solid grey;	
+}
+
+
+
+                                                                                        

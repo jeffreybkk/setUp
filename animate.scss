@@ -1,0 +1,110 @@
+// Animations effect use for any project based on daneden.me
+
+// The class name assocate the animation can be called using @extend
+
+//FADE IN & OUT 
+
+$duration:1s;
+$distance:20px;
+$fillMode:both;
+
+@each $animation in fadeIn,fadeInLeft,fadeInRight,fadeOut,fadeOutLeft, fadeOutRight,
+                    fadeInUp,fadeInDown,fadeOutUp,fadeOutDown,fadeInBigLeft,fadeInBigRight,
+                    fadeOutBigLeft,fadeOutBigRight,fadeInBigUp,fadeInBigDown,fadeOutBigUp,fadeOutBigDown {
+
+    .#{$fade} {
+    	@include animation( $animation $duration $fillMode); }
+    
+
+    @include keyframes($animation) {
+
+    	@if fadeIn {
+    		    0% { opacity:0; }
+    	        100% { opacity:1;} }
+
+
+            @else if fadeInLeft {
+            	0% { opacity:0; @include transform(translateX(-$distance));}
+            	100% { opacity:1; @include transform(translateX(0));} }
+
+
+            @else if fadeInRight {
+                        0% { opacity:0; @include transform(translate($distance));}
+            	100% { opacity:1; @include transform(translate(0));} }
+
+
+            @else if fadeOut {
+            	0% { opacity:1; }
+    	            100% { opacity:0;}}
+
+
+            @else if fadeOutLeft {
+            	0% { opacity:1;  @include transform(translateX(0));}
+    	            100% { opacity:0; @include transform(translateX(-$distance));} }
+
+
+            @else if fadeOutRight{
+		        0% { opacity:1;  @include transform(translate(0));}
+	                100% { opacity:0; @include transform(translate($distance));} }
+
+
+            @else if fadeInUp {
+            	0% { opacity:0;  @include transform(translateY(0));}
+    	            100% { opacity:1; @include transform(translateY(-$distance));} }
+
+
+    	    @else if fadeInDown {
+            	0% { opacity:0;  @include transform(translateY(-$distance));}
+    	            100% { opacity:1; @include transform(translateY(0));} }
+
+
+    	   @else if fadeOutUp {
+    		    0% { opacity:1;  @include transform(translateY(0));}
+    		        100% { opacity:0;  @include transform(translateY($distance));}}
+    	
+
+    	   @else if fadeOutDown {
+    		    0% { opacity:1;  @include transform(translateY(0));}
+    		        100% { opacity:0;  @include transform(translateY(-$distance));}}
+
+    	
+           @else if fadeOutBigUp {
+    		    0% { opacity:1;  @include transform(translateY(0));}
+    		        100% { opacity:0;  @include transform(translateY(-2000px));}}
+            
+
+           @else if fadeOutBigDown {
+    		    0% { opacity:1;  @include transform(translateY(0));}
+    		        100% { opacity:0;  @include transform(translateY(2000px));}}
+    	
+
+           @else if fadeInBigUp {
+                0% { opacity:1;  @include transform(translateY(-2000px));}
+                    100% { opacity:0;  @include transform(translateY(0));}}
+
+
+            @else if fadeInBigDown {
+                0% { opacity:1;  @include transform(translateY(2000px));}
+                    100% { opacity:0;  @include transform(translateY(0));}}
+
+
+             @else if fadeInBigLeft {
+                0% { opacity:1;  @include transform(translateX(2000px));}
+                    100% { opacity:0;  @include transform(translateX(0));}}
+        
+    }
+        
+} 
+
+
+
+// BOUNCE IN OUT LEFTIN LEFTOUT RIGHTIN RIGHTOUT
+
+
+
+
+
+
+
+
+
