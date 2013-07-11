@@ -1,4 +1,4 @@
-@import "neat/neat-helpers"
+@import "neat/neat-helpers";
 
 
 // GRID OVERLAY
@@ -31,8 +31,7 @@ $fg-column:$column;
 
 // BREAKPOINT 
 
-$mobile-land:new-breakpoint(min-width:480px 8);
-$tab: new-breakpoint(min-width:740px 12);
-$desktop: new-breakpoint(min-width: 1024px 12);
+$mobile-land:new-breakpoint(min-width 480px 8);
+$tab: new-breakpoint(min-width 740px 12);
+$desktop: new-breakpoint(min-width 1024px 12);
 
-@include span-columns(6,12);
