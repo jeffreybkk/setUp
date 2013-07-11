@@ -1,6 +1,6 @@
 setUp
 =====
 
-A bunch of  starter sass mixins for my projects
+A bunch of sass mixins for start my projects
 
-My scss files foe starting up project. Period
+
